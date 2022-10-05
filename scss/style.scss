@@ -1,0 +1,786 @@
+//FONTS
+
+@font-face {
+    font-family: PT Sans;
+    src: url(/fonts/PTSans-Regular.ttf);
+}
+
+
+@font-face {
+    font-family: Playfair Display;
+    src: url(/fonts/PlayfairDisplay-VariableFont_wght.ttf);
+}
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body._lock {
+    overflow: hidden;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+//COLORS
+$color-black: #0F0F0F;
+$color-white: #FFFFFF;
+$color-light-grey: #D0D0D0;
+$color-grey: #969696;
+
+body {
+    font-family: 'PT Sans';
+    overflow-x: hidden;
+    color: $color-white;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-width: 0;
+    background-color: #000;
+}
+
+.button-transparent {
+    text-transform: uppercase;
+    background: transparent;
+    color: $color-white;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 23px;
+    padding: 15px 30px;
+    text-align: center;
+    border: 2px solid $color-white;
+}
+
+.button-transparent:hover {
+    color: $color-black;
+    background-color: $color-white;
+    transition: 0.5s;
+}
+
+//UPPER-HEADER
+.upper-header {
+    width: 100%;
+    max-width: 1020px;
+    display: flex;
+    align-items: center;
+
+    &__container {
+        margin: 0 10px;
+        width: 1020px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 40px;
+    }
+
+    &__picto {
+        width: 13px;
+        height: 13px;
+        margin: 1px 5px 0 0;
+    }
+
+    &__picto:hover {
+        cursor: pointer;
+    }
+
+    &__text {
+        color: $color-grey;
+        font-size: 10px;
+        line-height: 16px;
+    }
+}
+
+.menu-icon {
+    display: none;
+}
+
+//HEADER
+.header {
+    margin: 0 0 0 10px;
+    width: 100%;
+    max-width: 1020px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+
+
+    &__wrapper {
+        background-color: $color-black;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__container {
+        max-width: 1020px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+    }
+
+    &__part {
+        display: flex;
+    }
+
+    &__logo {
+        width: 105px;
+        height: 50px;
+    }
+
+    &__button {
+        font-size: 13px;
+        line-height: 18px;
+        text-transform: uppercase;
+        background: transparent;
+        color: $color-grey;
+        padding: 31px 15px;
+        height: 100%;
+    }
+
+    &__button:hover {
+        color: $color-white;
+        transition: 0.5s;
+    }
+
+    &__button.active {
+        color: $color-white;
+        background-color: #1F1F1F;
+    }
+
+    &__picto {
+        margin: 0 15px 0 20px;
+    }
+
+    &__picto:hover {
+
+        cursor: pointer;
+    }
+}
+
+//SECTION 1
+.landing-description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__wrapper {
+        background: url("../img/Man_with_backpack_bckgrond.png") center;
+        width: 100%;
+        height: 810px;
+        max-width: 1920px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__outer-line {
+        width: 320px;
+        height: 320px;
+        outline: 4px solid $color-white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__logo {
+        width: 185px;
+        height: 85px;
+    }
+
+    &__underline {
+        border-bottom: 2px solid $color-white;
+        width: 175px;
+        margin-top: -10px;
+    }
+
+    &__town {
+        text-transform: uppercase;
+        font-size: 22px;
+        line-height: 28px;
+        margin-top: 10px;
+    }
+
+    &__text {
+        margin-top: 80px;
+        max-width: 730px;
+        text-align: center;
+        font-size: 16px;
+        line-height: 150%;
+        text-transform: uppercase;
+    }
+}
+
+//SECTION 2
+.season-catalog {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px;
+
+    &__season {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 1040px;
+
+    }
+
+    &__season-title {
+        font-size: 36px;
+        line-height: 48px;
+        font-family: "Playfair Display";
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    &__underline {
+        border-bottom: 2px solid $color-white;
+        width: 120px;
+        margin-top: 50px;
+    }
+
+    &__container-bot {
+        display: flex;
+        margin-top: 50px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__block {
+        margin: 20px;
+    }
+
+    //add size
+    &__image {
+        background-color: #191B1C;
+        max-width: 215px;
+        max-height: 264px;
+        padding: 20px;
+    }
+
+    &__name {
+        font-family: 'Playfair Display';
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 24px;
+        margin: 25px 0 10px 0;
+    }
+
+    &__price {
+        font-family: 'Playfair Display';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    &__catalog {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 880px;
+        height: 730px;
+        background: url('../img/Man_sitting_in_chair.png') center;
+    }
+
+    &__container {
+        position: relative;
+        top: 150px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__catalog-title {
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 48px;
+        text-transform: uppercase;
+        font-family: 'Playfair Display';
+    }
+
+    &__catalog-underline {
+        border-bottom: 2px solid $color-white;
+        width: 120px;
+        margin: 30px 0;
+    }
+
+}
+
+//SECTION 3
+.collection {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &__background {
+        width: 930px;
+        height: 600px;
+        background: url('../img/Man_standing_black-white.png') center;
+    }
+
+    //add adaptive
+    &__main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 10px 0 240px;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-weight: 400;
+        font-family: 'Playfair Display';
+        font-size: 36px;
+        line-height: 48px;
+        margin-bottom: 40px;
+    }
+
+    &__underline {
+        border-bottom: 2px solid $color-white;
+        width: 120px;
+        margin-bottom: 40px;
+    }
+
+    &__text {
+        max-width: 630px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        margin-bottom: 50px;
+    }
+}
+
+//SECTION 4
+.catalog {
+    margin: 120px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 48px;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+    }
+
+    &__underline {
+        border-bottom: 2px solid $color-white;
+        width: 120px;
+        margin-bottom: 40px;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 1100px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__block {
+        margin: 10px;
+        max-width: 260px;
+        max-height: 405px;
+    }
+
+    //add size
+    &__image {
+        background-color: #191B1C;
+        width: 215px;
+        height: 264px;
+        padding: 25px;
+    }
+
+    &__name {
+        font-family: 'Playfair Display';
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        margin-top: 20px;
+    }
+
+    &__price {
+        font-family: 'Playfair Display';
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 21px;
+        margin-top: 10px;
+    }
+
+    &__block-last {
+        margin: -65px 10px 10px 10px;
+        max-width: 260px;
+        max-height: 405px;
+        background-color: #191B1C;
+        position: relative;
+    }
+
+    &__image-last {
+        filter: blur(2px);
+        width: 215px;
+        height: 264px;
+        padding: 25px;
+    }
+
+    #last-button {
+        position: absolute;
+        top: 100px;
+        right: 12px;
+        font-family: 'Playfair Display';
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 24px;
+        white-space: nowrap;
+    }
+}
+
+.wrapper-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-width: 0;
+    background-color: #0F0F0F;
+}
+
+//SECTION 5
+.articles {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+        font-family: 'Playfair Display';
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 48px;
+        text-transform: uppercase;
+        margin-bottom: 50px;
+    }
+
+    &__underline {
+        border-bottom: 2px solid $color-white;
+        width: 120px;
+        margin-bottom: 40px;
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__block {
+        display: flex;
+        margin-bottom: 35px;
+    }
+
+    &__image {
+        max-width: 800px;
+        max-height: 437px;
+    }
+
+    &__article {
+        display: flex;
+        flex-direction: column;
+        padding: 30px 0 0 0;
+        margin: 0 20px 0 145px;
+        max-width: 650px;
+    }
+
+    &__article-title {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 23px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        margin-bottom: 25px;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__tags {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 23px;
+        text-align: right;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+}
+
+//SECTION 6
+.partners {
+    margin: 90px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+        font-family: 'Playfair Display';
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 48px;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+    }
+
+    &__underline {
+        border-bottom: 2px solid $color-white;
+        width: 120px;
+        margin-bottom: 60px;
+    }
+
+    &__block {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center
+    }
+
+    &__company {
+        margin-right: 30px;
+        max-width: 370px;
+        max-height: 150px;
+    }
+}
+
+//FOOTER
+.footer {
+    background: url(../img/footer_background.png) center no-repeat;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &__container {
+        margin-top: 80px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        // align-items: center;
+        max-width: 1100px;
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        margin-right: 30px;
+    }
+
+    &__title {
+        font-family: 'Playfair Display';
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        margin-bottom: 25px;
+        max-width: 350px;
+    }
+
+    &__button-container {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 300px;
+    }
+
+    &__button {
+        background: #0F0F0F;
+        padding: 10px 20px 10px 20px;
+        color: $color-white;
+        margin: 0 6px 20px 0;
+    }
+
+    &__button:hover {
+        background: $color-white;
+        color: $color-black;
+        transition: 0.5s;
+    }
+
+    &__form {}
+
+    &__input {
+        background: rgba(255, 255, 255, 0.4);
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        margin: 0;
+        padding: 10px 20px 10px 20px;
+        max-width: 210px;
+        color: $color-white;
+    }
+
+    &__input::placeholder {
+        color: $color-white;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+    }
+
+    &__submit {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        letter-spacing: 0.05em;
+        margin: -3px;
+        background: #0F0F0F;
+        padding: 10px 20px 10px 20px;
+        color: $color-white;
+    }
+
+    &__submit:hover {
+        background: rgba(255, 255, 255, 0.4);
+        transition: 0.5s;
+    }
+}
+
+//LOWER-FOOTER
+.lower-footer {
+    width: 100%;
+    max-width: 1020px;
+    display: flex;
+    align-items: center;
+
+    &__container {
+        margin: 0 10px;
+        width: 1020px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 40px;
+    }
+
+    &__text {
+        color: $color-grey;
+        font-size: 10px;
+        line-height: 16px;
+    }
+
+    #footer-link {
+        text-decoration: underline;
+    }
+}
+
+@import '..//scss/media';
